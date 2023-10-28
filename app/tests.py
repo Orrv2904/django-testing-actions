@@ -8,7 +8,7 @@ class ModelsTestCase(TestCase):
         
         Flight.objects.create(origin=a1, destination=a2, duration=100)
         Flight.objects.create(origin=a1, destination=a1, duration=200)
-        Flight.objects.create(origin=a1, destination=a2, duration=-100)
+        Flight.objects.create(origin=a1, destination=a2, duration=100)
 
     def test_departures_count(self):
         a = Airport.objects.get(code="AAA")
